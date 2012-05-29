@@ -1,12 +1,12 @@
 Summary:	This program adds tabs to Skype(tm) for Linux
 Summary(en.UTF-8):	This program adds tabs to Skype™ for Linux
 Name:		skypetab-ng
-Version:	0.4.9
-Release:	23
+Version:	0.4.10
+Release:	1
 License:	LGPL
 Group:		Applications/Networking
-Source0:	%{name}.tar.gz
-# Source0-md5:	0cd286b31278d5951a834d93579b5b2e
+Source0:	https://github.com/kekekeks/skypetab-ng/tarball/master/%{name}-%{version}.tgz
+# Source0-md5:	02f0f940c7d892af6d7494b2dde8731f
 URL:		http://keks-n.net/skypetab
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
@@ -22,7 +22,8 @@ This program adds tabs to Skype(tm) for Linux.
 This program adds tabs to Skype™ for Linux.
 
 %prep
-%setup -q
+%setup -qc
+mv kekekeks-skypetab-ng-*/* .
 
 %build
 qmake-qt4
